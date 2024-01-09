@@ -16,7 +16,7 @@ model User {
   @@map("users")
 }
 
-model Local {
+model Location {
   id    String @id @default(uuid())
   name  String @unique
   city  String
