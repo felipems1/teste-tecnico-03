@@ -33,7 +33,7 @@ $ yarn / npm i
 #### Defina as variáveis de ambiente
 ```bash
 1. Renomeie o arquivo
-	.env.example -> .env
+  .env.example -> .env
 
 2. Substitua os <valores>
   DATABASE_URL="postgresql://<username>:<password>@localhost:5432/<database-name>?schema=public"
@@ -62,17 +62,17 @@ $ docker-compose up
 
 `POST /accounts`
 
-    curl -i -H 'Accept: application/json' -X POST -d '{"username": "example", "password": "example"}' http://localhost:3333/accounts
+    curl -i -H 'Accept: application/json' -X POST -d '{"name": "example", "email": "example", "password": "example"}' http://localhost:3333accounts
 
 #### Response
 
     HTTP/1.1 201 OK
-		Date: Fri, 27 Oct 2023 17:05:20 GMT
-		Status: 200 OK
-		Connection: close
-		RateLimit-Limit: 30
-		RateLimit-Remaining: 29
-		Content-Type: application/json
+	Date: Fri, 27 Oct 2023 17:05:20 GMT
+	Status: 200 OK
+	Connection: close
+	RateLimit-Limit: 30
+	RateLimit-Remaining: 29
+	Content-Type: application/json
 
 ##
 
@@ -80,22 +80,22 @@ $ docker-compose up
 
 `POST /sessions`
 
-    curl -i -H 'Accept: application/json' -X POST -d '{"username": "example" "password": "example"}' http://localhost:3333/sessions
+    curl -i -H 'Accept: application/json' -X POST -d '{"email": "example", "password": "example"}' http://localhost:3333/sessions
 
 #### Response
 
   	HTTP/1.1 200 OK
-		Date: Fri, 27 Oct 2023 17:10:20 GMT
-		Status: 200 OK
-		Connection: close
-		RateLimit-Limit: 30
-		RateLimit-Remaining: 28
-		Content-Type: application/json
+	Date: Fri, 27 Oct 2023 17:10:20 GMT
+	Status: 200 OK
+	Connection: close
+	RateLimit-Limit: 30
+	RateLimit-Remaining: 28
+	Content-Type: application/json
 
 ```js
-		{
-  			"access_token": "token_example"
-		}
+{
+  	"access_token": "token_example"
+}
 ```
 
 ##
@@ -106,18 +106,18 @@ $ docker-compose up
 
 `POST /locations`
 
-    curl -i -H 'Accept: application/json' -H 'Authorization: Bearer token' -X POST -d '{"name": "example", "city": "example", "state": "example"}' http://localhost:3333/location
+    curl -i -H 'Accept: application/json' -H 'Authorization: Bearer token' -X POST -d '{"name": "example", "city": "example", "state": "example"}' http://localhost:3333/locations
 
 
 #### Response
 
-    HTTP/1.1 200 OK
-		Date: Fri, 27 Oct 2023 17:15:20 GMT
-		Status: 200 OK
-		Connection: close
-		RateLimit-Limit: 30
-		RateLimit-Remaining: 27
-		Content-Type: application/json
+    HTTP/1.1 201 OK
+	Date: Fri, 27 Oct 2023 17:15:20 GMT
+	Status: 201 OK
+	Connection: close
+	RateLimit-Limit: 30
+	RateLimit-Remaining: 27
+	Content-Type: application/json
 
 ##
 
@@ -130,20 +130,12 @@ $ docker-compose up
 #### Response
 
     HTTP/1.1 200 OK
-		Date: Fri, 27 Oct 2023 17:20:20 GMT
-		Status: 200 OK
-		Connection: close
-		RateLimit-Limit: 30
-		RateLimit-Remaining: 26
-		Content-Type: application/json
-
-```js
-{
-  "name": "Nome atualizado",
-  "city": "Cidade atualizada",
-  "state": "Estado atualizado"
-}
-```
+	Date: Fri, 27 Oct 2023 17:20:20 GMT
+	Status: 200 OK
+	Connection: close
+	RateLimit-Limit: 30
+	RateLimit-Remaining: 26
+	Content-Type: application/json
 
 ##
 
@@ -151,14 +143,14 @@ $ docker-compose up
 
 `DELETE /locations?id=locationId`
 
-    curl -i -H 'Accept: application/json' -H 'Authorization: Bearer token' -X DELETE  http://localhost:3333/locations?id=locationId
+  	curl -i -H 'Accept: application/json' -H 'Authorization: Bearer token' -X DELETE  http://localhost:3333/locations?id=locationId
 
 #### Response
 
     HTTP/1.1 204 No Content
-		Date: Fri, 27 Oct 2023 17:25:20 GMT
-		Status: 204 No Content
-		Connection: close
+	Date: Fri, 27 Oct 2023 17:25:20 GMT
+	Status: 204 No Content
+	Connection: close
 
 ##
 
@@ -166,18 +158,19 @@ $ docker-compose up
 
 `GET /locations`
 
-		curl -i -H 'Accept: application/json' -H 'Authorization: Bearer token' -X GET http://localhost:3333/locations
+	curl -i -H 'Accept: application/json' -H 'Authorization: Bearer token'-X GET http://localhost:3333/locations
 
 `GET /locations?name=example`
 
-    curl -i -H 'Accept: application/json' -H 'Authorization: Bearer token' -X GET http://localhost:3333/locations?name=example
+	curl -i -H 'Accept: application/json' -H 'Authorization: Bearer token' -X 
+	GET http://localhost:3333/locations?name=example
 
 #### Response
 
     HTTP/1.1 204 No Content
-		Date: Fri, 27 Oct 2023 17:25:20 GMT
-		Status: 204 No Content
-		Connection: close
+	Date: Fri, 27 Oct 2023 17:25:20 GMT
+	Status: 204 No Content
+	Connection: close
 
 ```js
 [
