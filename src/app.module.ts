@@ -7,6 +7,8 @@ import { envSchema } from './env'
 import { AuthModule } from './auth/auth.module'
 import { AuthenticateController } from './controllers/authenticate.controller'
 import { CreateLocationController } from './controllers/create-location.controller'
+import { GetLocationsListController } from './controllers/get-locations-list.controller'
+import { GetLocationsListService } from './services/get-locations-list.service'
 
 @Module({
   imports: [
@@ -20,7 +22,8 @@ import { CreateLocationController } from './controllers/create-location.controll
     CreateAccountController,
     AuthenticateController,
     CreateLocationController,
+    GetLocationsListController,
   ],
-  providers: [PrismaService],
+  providers: [PrismaService, GetLocationsListService],
 })
 export class AppModule {}
