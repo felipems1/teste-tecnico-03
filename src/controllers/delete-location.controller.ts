@@ -1,4 +1,11 @@
-import { Controller, Delete, Query, UseGuards, UsePipes } from '@nestjs/common'
+import {
+  Controller,
+  Delete,
+  HttpCode,
+  Query,
+  UseGuards,
+  UsePipes,
+} from '@nestjs/common'
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard'
 import { ZodValidationPipe } from 'src/pipes/zod-validation-pipe'
 
@@ -14,6 +21,7 @@ export class DeleteLocationController {
   constructor(private deleteLocationService: DeleteLocationService) {}
 
   @Delete()
+  @HttpCode(204)
   async handle(@Query('id') locationId: string) {
     await this.deleteLocationService.deleteLocation(locationId)
   }
