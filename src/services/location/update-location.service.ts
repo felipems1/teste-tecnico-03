@@ -23,6 +23,13 @@ export class UpdateLocationService {
     return this.prisma.location.update({
       where: { id: locationId },
       data: updateData,
+      select: {
+        id: true,
+        name: true,
+        city: true,
+        state: true,
+        updatedAt: true,
+      },
     })
   }
 }

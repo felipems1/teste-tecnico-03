@@ -24,12 +24,16 @@ export class CreateLocationService {
       throw new ConflictException('Location name already exists.')
     }
 
-    await this.prisma.location.create({
+    const location = await this.prisma.location.create({
       data: {
         name,
         city,
         state,
       },
     })
+
+    return {
+      location,
+    }
   }
 }

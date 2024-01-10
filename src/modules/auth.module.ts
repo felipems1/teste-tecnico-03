@@ -8,7 +8,7 @@ import { JwtStrategy } from '../auth/jwt.strategy'
     PassportModule,
     JwtModule.register({
       global: true,
-      secret: process.env.JWT_SECRET,
+      secretOrPrivateKey: process.env.JWT_SECRET,
     }),
   ],
   providers: [JwtStrategy],

@@ -30,7 +30,10 @@ export class AuthenticateService {
 
     const expiresIn = 60 * 60 // 1 hour
 
-    const accessToken = this.jwt.sign({ sub: user.id }, { expiresIn })
+    const accessToken = this.jwt.sign(
+      { sub: user.id },
+      { expiresIn, secret: process.env.JWT_SECRET },
+    )
 
     return {
       access_token: accessToken,
