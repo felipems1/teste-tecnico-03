@@ -1,16 +1,11 @@
 import { Module } from '@nestjs/common'
 
-import { PrismaService } from './prisma/prisma.service'
-import { CreateAccountController } from './controllers/create-account.controller'
 import { ConfigModule } from '@nestjs/config'
-import { envSchema } from './env'
-import { AuthModule } from './auth/auth.module'
-import { AuthenticateController } from './controllers/authenticate.controller'
-import { CreateLocationController } from './controllers/create-location.controller'
-import { GetLocationsListController } from './controllers/get-locations-list.controller'
-import { GetLocationsListService } from './services/get-locations-list.service'
-import { DeleteLocationService } from './services/delete-location.service'
-import { DeleteLocationController } from './controllers/delete-location.controller'
+import { envSchema } from './env/env'
+import { AuthModule } from './modules/auth.module'
+
+import { ControllerModule } from './modules/controller.module'
+import { ServiceModule } from './modules/service.module'
 
 @Module({
   imports: [
@@ -19,14 +14,8 @@ import { DeleteLocationController } from './controllers/delete-location.controll
       isGlobal: true,
     }),
     AuthModule,
+    ControllerModule,
+    ServiceModule,
   ],
-  controllers: [
-    CreateAccountController,
-    AuthenticateController,
-    CreateLocationController,
-    GetLocationsListController,
-    DeleteLocationController,
-  ],
-  providers: [PrismaService, GetLocationsListService, DeleteLocationService],
 })
 export class AppModule {}

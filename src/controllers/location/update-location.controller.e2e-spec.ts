@@ -5,7 +5,7 @@ import request from 'supertest'
 import { PrismaService } from 'src/prisma/prisma.service'
 import { JwtService } from '@nestjs/jwt'
 
-describe('Delete locations list (E2E)', () => {
+describe('Update location (E2E)', () => {
   let app: INestApplication
   let prisma: PrismaService
   let jwt: JwtService
@@ -24,7 +24,7 @@ describe('Delete locations list (E2E)', () => {
     await app.init()
   })
 
-  test('[DELETE] /locations', async () => {
+  test('[PUT] /locations', async () => {
     const user = await prisma.user.create({
       data: {
         name: 'John Doe',
@@ -48,12 +48,16 @@ describe('Delete locations list (E2E)', () => {
     const locationId = locations[0].id
 
     const response = await request(app.getHttpServer())
-      .delete('/locations')
+      .put('/locations')
       .query({ id: locationId })
       .set('Authorization', `Bearer ${accessToken}`)
-      .send()
+      .send({
+        name: 'updated name',
+        city: 'updated city',
+        state: 'updated state',
+      })
 
-    expect(response.statusCode).toBe(204)
+    expect(response.statusCode).toBe(200)
 
     const locationOnDatabase = await prisma.location.findUnique({
       where: {
@@ -61,6 +65,12 @@ describe('Delete locations list (E2E)', () => {
       },
     })
 
-    expect(locationOnDatabase).toBeNull()
+    expect(locationOnDatabase).toEqual(
+      expect.objectContaining({
+        name: 'updated name',
+        city: 'updated city',
+        state: 'updated state',
+      }),
+    )
   })
 })

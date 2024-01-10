@@ -1,7 +1,7 @@
 import { Controller, Get, Query, UseGuards } from '@nestjs/common'
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard'
 
-import { GetLocationsListService } from 'src/services/get-locations-list.service'
+import { GetLocationsListService } from 'src/services/location/get-locations-list.service'
 
 @Controller('/locations')
 @UseGuards(JwtAuthGuard)

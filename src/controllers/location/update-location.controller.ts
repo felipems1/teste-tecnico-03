@@ -1,7 +1,7 @@
 import { Body, Controller, Put, Query, UseGuards } from '@nestjs/common'
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard'
 import { ZodValidationPipe } from 'src/pipes/zod-validation-pipe'
-import { UpdateLocationService } from 'src/services/update-location.service'
+import { UpdateLocationService } from 'src/services/location/update-location.service'
 import { z } from 'zod'
 
 const updateLocationBodySchema = z.object({

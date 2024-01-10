@@ -9,7 +9,7 @@ import {
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard'
 import { ZodValidationPipe } from 'src/pipes/zod-validation-pipe'
 
-import { DeleteLocationService } from 'src/services/delete-location.service'
+import { DeleteLocationService } from 'src/services/location/delete-location.service'
 import { z } from 'zod'
 
 const idQueryParamSchema = z.string()
