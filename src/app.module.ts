@@ -9,6 +9,8 @@ import { AuthenticateController } from './controllers/authenticate.controller'
 import { CreateLocationController } from './controllers/create-location.controller'
 import { GetLocationsListController } from './controllers/get-locations-list.controller'
 import { GetLocationsListService } from './services/get-locations-list.service'
+import { DeleteLocationService } from './services/delete-location.service'
+import { DeleteLocationController } from './controllers/delete-location.controller'
 
 @Module({
   imports: [
@@ -23,7 +25,8 @@ import { GetLocationsListService } from './services/get-locations-list.service'
     AuthenticateController,
     CreateLocationController,
     GetLocationsListController,
+    DeleteLocationController,
   ],
-  providers: [PrismaService, GetLocationsListService],
+  providers: [PrismaService, GetLocationsListService, DeleteLocationService],
 })
 export class AppModule {}
