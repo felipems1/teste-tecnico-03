@@ -12,8 +12,6 @@ services:
       - 3333:3333
     depends_on:
       - postgres
-    links:
-      - postgres
   postgres:
     image: postgres:latest
     container_name: test-db
