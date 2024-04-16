@@ -2,10 +2,10 @@ import { Search, ShoppingCart } from 'lucide-react'
 
 export function Header() {
   return (
-    <header className="w-full h-32 bg-pink-600 text-white p-4 flex flex-col justify-center gap-4">
+    <header className="w-full h-32 bg-purple-600 text-white p-4 flex flex-col justify-center gap-4">
       <div className="flex justify-between items-center">
         <h2>Pet Friends Acessories</h2>{' '}
-        <div className="flex p-2 justify-center items-center rounded bg-pink-700 cursor-pointer hover:bg-pink-500">
+        <div className="flex p-2 justify-center items-center rounded bg-purple-700 cursor-pointer hover:bg-purple-500">
           <ShoppingCart />
         </div>
       </div>
