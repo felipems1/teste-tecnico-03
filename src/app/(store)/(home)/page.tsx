@@ -25,7 +25,7 @@ export default async function Home() {
         <h2 className="font-bold">Brinquedos</h2>
       </div>
 
-      <div className="flex px-4 gap-5 w-full overflow-x-auto">
+      <div className="flex px-4 mb-4 gap-5 w-full overflow-x-auto">
         <ProductCards products={toys} />
       </div>
     </div>

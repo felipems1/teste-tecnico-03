@@ -1,5 +1,4 @@
 import { links } from '@/utils/links'
-import Link from 'next/link'
 
 export function Navigation() {
   return (
@@ -9,14 +8,11 @@ export function Navigation() {
           className="flex flex-col justify-center items-center w-28"
           key={item.id}
         >
-          <Link
-            href={item.path}
-            className="w-16 h-16 flex justify-center items-center rounded-full border border-purple-600 border-solid p-1"
-          >
+          <button className="w-16 h-16 flex justify-center items-center rounded-full border border-purple-600 border-solid p-1">
             <div className="w-full h-full rounded-full p-3 flex justify-center items-center bg-purple-600 text-white">
               {item.icon}
             </div>
-          </Link>
+          </button>
           <h3 className="text-purple-600 font-bold">{item.name}</h3>
         </div>
       ))}
