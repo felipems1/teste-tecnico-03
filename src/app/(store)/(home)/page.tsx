@@ -4,8 +4,10 @@ import { ProductCards } from '@/components/product-cards'
 import { getProducts } from '@/services/get-products'
 
 export default async function Home() {
-  const toys = await getProducts('toy')
-  const beds = await getProducts('bed')
+  const toysPromise = getProducts('toy')
+  const bedsPromise = getProducts('bed')
+
+  const [toys, beds] = await Promise.all([toysPromise, bedsPromise])
 
   return (
     <div className="w-full h-full overflow-x-hidden">
