@@ -1,13 +1,11 @@
-import { Search, ShoppingCart } from 'lucide-react'
+import { Search } from 'lucide-react'
+import { CartWidget } from './cart-widget'
 
 export function Header() {
   return (
     <header className="w-full h-32 bg-purple-600 text-white p-4 flex flex-col justify-center gap-4">
       <div className="flex justify-between items-center">
-        <h2>Pet Friends Acessories</h2>{' '}
-        <div className="flex p-2 justify-center items-center rounded bg-purple-700 cursor-pointer hover:bg-purple-500">
-          <ShoppingCart />
-        </div>
+        <h2>Pet Friends Acessories</h2> <CartWidget />
       </div>
       <form className="flex w-full items-center gap-3 rounded bg-white px-5 py-3 ring-zinc-700">
         <input
