@@ -98,5 +98,103 @@
       "description":
         "is simply dummy text of the printing and typesetting industry."
     }
+  ],
+  "search": [
+    {
+      "id": 1,
+      "name": "Cama Londres 1",
+      "imageURL": "/cama-1.png",
+      "price": 100,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 2,
+      "name": "Cama Londres 2",
+      "imageURL": "/cama-2.png",
+      "price": 200,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 3,
+      "name": "Cama Londres 3",
+      "imageURL": "/cama-3.png",
+      "price": 300,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 4,
+      "name": "Cama Londres 4",
+      "imageURL": "/cama-4.png",
+      "price": 400,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 5,
+      "name": "Cama Londres 5",
+      "imageURL": "/cama-5.png",
+      "price": 500,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 6,
+      "name": "Cama Londres 6",
+      "imageURL": "/cama-6.png",
+      "price": 600,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 1,
+      "name": "Brinquedo Londres 1",
+      "imageURL": "/brinquedo-1.png",
+      "price": 100,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 2,
+      "name": "Brinquedo Londres 2",
+      "imageURL": "/brinquedo-2.png",
+      "price": 200,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 3,
+      "name": "Brinquedo Londres 3",
+      "imageURL": "/brinquedo-3.png",
+      "price": 300,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 4,
+      "name": "Brinquedo Londres 4",
+      "imageURL": "/brinquedo-4.png",
+      "price": 400,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 5,
+      "name": "Brinquedo Londres 5",
+      "imageURL": "/brinquedo-5.png",
+      "price": 500,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 6,
+      "name": "Brinquedo Londres 6",
+      "imageURL": "/brinquedo-6.png",
+      "price": 600,
+      "description":
+        "is simply dummy text of the printing and typesetting industry."
+    }
   ]
 }
