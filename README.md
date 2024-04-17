@@ -12,6 +12,7 @@ Um pouco das tecnologias que foram utilizadas no projeto:
 - TypeScript
 - Tailwind CSS
 - Radix/UI
+- Context API
 - JSON-Server
 
 ## 3 - Instruções de Uso:
